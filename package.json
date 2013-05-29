@@ -1,0 +1,10 @@
+{
+    "name": "trafiklab-proxy",
+    "description": "node/express rest api for getting SL departures from trafiklab.se",
+    "version": "0.0.1",
+    "private": false,
+    "dependencies": {
+        "express": "3.2.5",
+        "request": "2.21.0"
+    }
+}
