@@ -11,6 +11,7 @@ app.get('/departures/:id', function (req, res) {
                 accept: 'application/json'
             }},
         function (error, response, body) {
+            res.setHeader('Content-Type', 'application/json');
             res.send(body);
         });
 });
