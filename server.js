@@ -1,6 +1,7 @@
 var express = require('express');
 var request = require('request');
 var key = require('./key');
+var parser = require('./parser');
 
 var app = express();
 
@@ -12,7 +13,7 @@ app.get('/departures/:id', function (req, res) {
             }},
         function (error, response, body) {
             res.setHeader('Content-Type', 'application/json');
-            res.send(body);
+            res.send(parser.getTrains(body));
         });
 });
 
